@@ -1,0 +1,1 @@
+function DataElement(){}var Transporter=require("./transporter");module.exports=DataElement,DataElement.format=function(a){var e="";a.params&&(a.value=a.params);try{e=Transporter.decode(a.value)}catch(t){e=a.value}return{id:a.id,value:e?"string"==typeof e?JSON.parse(e):e:null,timestamp:a.timestamp}};
